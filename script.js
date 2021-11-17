@@ -5,3 +5,13 @@ function cleanUpIndex() {
     const clean = document.querySelectorAll()
     clean.remove()
 }
+
+function createSingleIndex(contact) {
+    const contactList = [ {
+        name: contact.name,
+        phone: contact.phone,
+        address: contact.address,
+        email: contact.email
+    } ]
+    return contactList
+}
