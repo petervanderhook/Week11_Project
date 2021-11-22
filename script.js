@@ -23,6 +23,22 @@ function cleanUpIndex() {
     body.insertAdjacentHTML('beforeend', '<div class="main"></div>')
 }
 
+function cleanUpCreate() {
+    const main = document.querySelector('.main')
+    main.remove()
+    const body = document.querySelector('body')
+    body.insertAdjacentHTML('beforeend', '<div class="main"></div>')
+}
+
+function cleanUpView() {
+    const main = document.querySelector('.main')
+    main.remove()
+    const body = document.querySelector('body')
+    body.insertAdjacentHTML('beforeend', '<div class="main"></div>')
+}
+
+
+
 function createSingleIndex(contact) {
     const contactList = [ {
         name: contact.name,
@@ -41,6 +57,10 @@ function renderIndex(contact_array) {
     }
     contact.insertAdjacentHTML('beforeend', html)
 }
+
+
+
+
 
 /*function renderIndex(contact_array) {
     for (i = 0; i++; i < length(contact_array) ) {
