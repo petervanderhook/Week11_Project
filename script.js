@@ -19,6 +19,8 @@ const contactList = [
 function cleanUpIndex() {
     const main = document.querySelector('.main')
     main.remove()
+    const body = document.querySelector('body')
+    body.insertAdjacentHTML('beforeend', '<div class="main"></div>')
 }
 
 function createSingleIndex(contact) {
@@ -31,12 +33,13 @@ function createSingleIndex(contact) {
     return contactList
 }
 
-
 function renderIndex(contact_array) {
-    let contact = document.querySelector('main')
+    let contact = document.querySelector('.main')
+    let html = '';
     for(let i = 0; i < contact_array.length; i++ ) {
-        console.log('testing ${contact_array[i]}')
+        html += ('beforeend', `<a href="page3.html"><div class="contact"><p>${contact_array[i].name}</p></div></a>`);
     }
+    contact.insertAdjacentHTML('beforeend', html)
 }
 
 /*function renderIndex(contact_array) {
